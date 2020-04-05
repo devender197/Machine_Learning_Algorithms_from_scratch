@@ -31,7 +31,4 @@ dataX['centroid'] = closest_centroids_ids
 plt.scatter(dataX[dataX.centroid == 2].sepal_length,dataX[dataX.centroid == 2].sepal_width,color = 'red')
 plt.scatter(dataX[dataX.centroid == 1].sepal_length,dataX[dataX.centroid == 1].sepal_width,color = 'blue')
 plt.scatter(dataX[dataX.centroid == 0].sepal_length,dataX[dataX.centroid == 0].sepal_width,color = 'green')
-plt.scatter(data[data['class'] == 'SETOSA'].sepal_length,data[data['class'] == 'SETOSA'].sepal_width,color = 'red')
-plt.scatter(data[data['class'] == 'VERSICOLOR'].sepal_length,data[data['class'] == 'VERSICOLOR'].sepal_width,color = 'blue')
-plt.scatter(data[data['class'] == 'VIRGINICA'].sepal_length,data[data['class']  == 'VIRGINICA'].sepal_width,color = 'green')
 plt.show()
