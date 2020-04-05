@@ -26,7 +26,7 @@ class KMeans:
         centroids  = self.initialCentroid()
 		
 		# default centroid array
-        closest_centroids_ids = np.empty((self.num_row, 1))
+        closest_centroids_ids = np.empty((self.train_rows, 1))
 		
 		# find closest centroid
         for x in range(iteration):
@@ -35,9 +35,7 @@ class KMeans:
 
             # Compute means based on the closest centroids found in the previous part.
             centroids = self.computeCentroid(
-                self.trainX,
                 closest_centroids_ids,
-                self.k_cluster
             )
 
         return centroids, closest_centroids_ids
@@ -85,7 +83,7 @@ class KMeans:
         for example_index in range(num_row):
             distances = np.zeros((num_centroids, 1))
             for centroid_index in range(num_centroids):
-                distance_difference = self.train[example_index, :] - centroids[centroid_index, :]
+                distance_difference = self.trainX[example_index, :] - centroids[centroid_index, :]
                 distances[centroid_index] = np.sum(distance_difference ** 2)
             closest_centroids_ids[example_index] = np.argmin(distances)
 

@@ -1,0 +1,6 @@
+# ignore following folders
+/__pycache__/*
+/.ipynb_checkpoints/*
+
+# ignore files
+__init__.py
